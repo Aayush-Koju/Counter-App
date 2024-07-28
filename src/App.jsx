@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import {useState} from "react";
 
 
 function App() {
@@ -13,6 +13,10 @@ function App() {
     setCounter(count - 1);
   }
 
+  const clear = () => {
+    setCounter(0);
+  }
+
   return (
     <>
       <div>
@@ -20,7 +24,7 @@ function App() {
       </div> 
       <button onClick={increase}>Increment(+)</button>
       <button onClick={decrease}>Decrement(-)</button>
-      <button>Reset</button>
+      <button onClick={clear}>Reset</button>
     </>
   )
 }
