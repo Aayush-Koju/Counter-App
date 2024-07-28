@@ -24,14 +24,18 @@ function App() {
   }
 
   return (
-    <>
-      counter: {count}
+    <div className="counter-container">
+      <h1>Counter Application</h1>
 
-      <button onClick={increase}>Increment(+)</button>
-      <input value={num} onChange={changeNum}/>
-      <button onClick={decrease}>Decrement(-)</button>
-      <button onClick={clear}>Reset</button>
-    </>
+      <h2>Counter: {count} </h2>
+
+      <div className="buttons-container">
+        <button onClick={increase} className="button increment-button">Increment(+)</button>
+        <input value={num} onChange={changeNum}/>
+        <button onClick={decrease} className="button decrement-button">Decrement(-)</button>
+        <button onClick={clear} className="button reset-button">Reset</button>
+      </div>
+    </div>
   )
 }
 
