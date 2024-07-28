@@ -12,6 +12,7 @@ function App() {
 
   const decrease = () => {
     setCounter(count - num);
+
   }
 
   const clear = () => {
@@ -19,7 +20,7 @@ function App() {
   }
 
   const changeNum = (e) => {
-    setNum(e.target.value);
+    setNum(Number(e.target.value));
   }
 
   return (
@@ -27,7 +28,7 @@ function App() {
       counter: {count}
 
       <button onClick={increase}>Increment(+)</button>
-      <input type="number" value={num} onChange={changeNum}/>
+      <input value={num} onChange={changeNum}/>
       <button onClick={decrease}>Decrement(-)</button>
       <button onClick={clear}>Reset</button>
     </>
